@@ -6,7 +6,7 @@ pipeline {
             args '-u root' // 컨테이너 실행에 필요한 옵션 설정
             reuseNode true // 젠킨스의 작업영역과 컨테이너를 연결하여 사용
             registryUrl 'https://index.docker.io/v1/'  // 이미지를 다운로드 받은 저장소 지정
-            registryCredentialsId 'docker-hub' // 저장소의 로그인 정보를 가지는 credential 지정
+            registryCredentialsId 'docker-hub-token' // 저장소의 로그인 정보를 가지는 credential 지정
         }
     }
     environment {
